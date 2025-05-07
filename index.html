@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">AK<span style="color:#00ff99;">Portfolio</span></a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>Hi There!<br><strong>I am <span class="typed-text"></span></strong></h1>
+      <p>I make the complex simple.</p>
+      <a href="#contact" class="btn btn-custom mt-3">Contact Me</a>
+    </div>
+  </header>
+
+
+<!-- ==============================abouts===============-->
+<section class="section bg-dark text-white py-5" id="about">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Profile Image -->
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <img src="images/DSC_0232 (1).jpg" alt="Profile Photo" class="img-fluid rounded-circle shadow-lg profile-img animate__animated animate__zoomIn" />
+      </div>
+
+      <!-- About Content -->
+      <div class="col-lg-8">
+        <h1 class="display-5 mb-3 animate__animated animate__fadeInUp" style="color: #00ff99;">Who am I?</h1>
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+          I'm <strong>AK</strong>, a passionate <strong>Graphic Designer</strong>, skilled <strong>Video Editor</strong>, and dedicated <strong>Web Developer</strong>. I bring creative ideas to life through compelling visuals, engaging digital content, and user-friendly websites.
+        </p>
+        <p class="animate__animated animate__fadeInUp animate__delay-2s">
+          With a keen eye for design and a strong technical foundation, I aim to deliver innovative solutions that exceed expectations. Whether it’s crafting a brand identity, editing impactful videos, or developing responsive websites, I’m committed to turning complex ideas into effective results.
+        </p>
+        <a href="" class="btn btn-custom mt-3 animate__animated animate__fadeInUp animate__delay-3s">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- ============================== Projects ===============-->
+<section class="section projects py-5 bg-black text-white" id="projects">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="color: #00ff99;">My Projects</h2>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-light m-1 filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-outline-light m-1 filter-btn" data-filter="design">Graphic Design</button>
+      <button class="btn btn-outline-light m-1 filter-btn" data-filter="video">Video Editing</button>
+      <button class="btn btn-outline-light m-1 filter-btn" data-filter="web">Web Development</button>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="row g-4" id="project-gallery">
+
+      <!--Graphic Designs -->
+      <div class="col-md-4 project-item" data-category="design">
+        <div class="card bg-dark text-white border-0 shadow h-100" data-bs-toggle="modal" data-bs-target="#posterModal">
+          <img src="images/graph.jpg" class="card-img-top" alt="Design 1">
+          <div class="card-body">
+            <h5 class="card-title">Poster Designs</h5>
+            <p class="card-text">Click to view all samples.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============Web Projects startssss=========================-->
+      <div class="col-md-4 project-item" data-category="web">
+        <a href="https://ak24-ui.github.io/magic/" target="_blank" class="text-decoration-none">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <img src="images/rear-view-programmer-working-all-night-long.jpg" class="card-img-top" alt="Web 1">
+            <div class="card-body">
+              <h5 class="card-title">Coffee Bar Website</h5>
+              <p class="card-text">click to view.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+<!-- =====================Web Projects endssss========================-->
+
+
+      <!-- Video Projects -->
+      <div class="col-md-4 project-item" data-category="video">
+        <a href="https://www.instagram.com/reel/your-video-id/" target="_blank" class="text-decoration-none">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <img src="images/editing.jpg" class="card-img-top" alt="Video 1">
+            <div class="card-body">
+              <h5 class="card-title">Promo Edit</h5>
+              <p class="card-text">Short promotional ad edited in Premiere Pro. Click to view on Instagram.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+       <!-- Video Projects ends-->
+  
+    </div>
+  </div>
+</section>
+
+<!-- ================= Poster Modal ================= -->
+<div class="modal fade" id="posterModal" tabindex="-1" aria-labelledby="posterModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">My Poster Designs Gallery</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4"><img src="graphs/boomplay poster.jpg" class="img-fluid rounded" alt="Poster 1"></div>
+          <div class="col-md-4"><img src="graphs/AD.jpg" class="img-fluid rounded" alt="Poster 2"></div>
+          <div class="col-md-4"><img src="graphs/1.jpg" class="img-fluid rounded" alt="Poster 3"></div>
+          <!-- Add more poster images -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--================================contacts=====================================-->
+
+<section class="contact-section py-5" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4">Let's Connect</h2>
+
+    <!-- Social Media Icons -->
+    <div class="text-center mb-4">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/255628282733" target="_blank" class="mx-2 text-success fs-3">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com/yourUsername" target="_blank" class="mx-2 text-danger fs-3">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@yourUsername" target="_blank" class="mx-2 text-dark fs-3">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <!-- Telegram -->
+      <a href="https://t.me/yourUsername" target="_blank" class="mx-2 text-primary fs-3">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+    </div>
+
+    <!-- Email Contact Form -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" rows="5" class="form-control" placeholder="Your Message..." required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-custom">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--===================================contacts ends============================-->
+
+<footer><p>&copy; 2025 GenesisAK. All rights reserved.</p></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".typed-text", {
+      strings: ["a Designer", "an Editor", "a 3D Animator","a Software Developer"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 2000,
+      loop: true,
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-item');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      projects.forEach(project => {
+        const category = project.getAttribute('data-category');
+        if (filter === 'all' || filter === category) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 80;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  </script>
+</body>
+</html>
